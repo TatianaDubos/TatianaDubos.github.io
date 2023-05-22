@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Tatiana Dubos">
+    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <script type="text/javascript" src="script.js"></script>
+    <link rel="stylesheet" href="stylesheet.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <title>Portfolio - Tatiana Dubos</title>
+    <title>Portfolio - Tatiana Dubos</title>
+</head>
+<body  id="contentToTranslate" onload="carousel()">
+
+    <!-- Header -->
+    <header>
+        <div class="logo">
+          <img src="Images/logo.png">
+          <h1 class="neon" >Mon portfolio</h1>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="index.html">Acceuil</a></li>
+            <li><a href="cv.html">Profil</a></li>
+            <li><button id="translate" onclick="translateToEnglish()">Langue</button></li>
+          </ul>
+        </nav>
+      </header>
+
+       <!-- Content -->
+ 
+    <ul class="gallery">
+       <!-- 1e project -->
+        <li><h1 class="title">Gestion d'une bibliothèque</h1><hr>
+           <div class="row"> 
+            <div class="column">
+                <p>Site web réactif pour gérer une bibliothèque municipale.</p>
+
+                <p>Ce site permet aux clients de se connecter ou s'inscrire pour rechercher des livres. 
+                Les clients peuvent aussi consulter la liste des documents qu'ils ont empruntés ou réservés avec toutes les informations nécessaires.</p>
+
+                <p>Les employés de la bibliothèque peuvent gérer les clients, les emprunts, les retours et les retards.</p>
+
+                <p>L'administrateur peut gérer les documents et les employés.</p>
+
+                <p>
+                  <ul class="list">
+                    <li>Html</li>
+                    <li>Css</li>
+                    <li>JavaScript</li>
+                    <li>Php</li>
+                    <li>MySQL</li>
+                    <li>Bootstrap</li>
+                  </ul>
+                </p>
+              <div class="center"><button><a target="_blank" href="https://github.com/TatianaDubos/Library-Project.git">Dépôt GitHub</a></button></div>
+            </div>
+            
+            <div class="column">
+              <div class="photo-grid">
+                <div class="photo" onclick="largePhoto(this)">
+                  <img src="Images/projet_Library1.png">
+                </div>
+                <div class="photo" onclick="largePhoto(this)">
+                  <img src="Images/projet_Library2.png" >
+                </div>
+                <div class="photo" onclick="largePhoto(this)">
+                  <img src="Images/projet_Library3.png">
+                </div>
+                <div class="photo" onclick="largePhoto(this)">
+                  <img src="Images/projet_Library4.png">
+                </div>
+                <div class="photo" onclick="largePhoto(this)">
+                  <img src="Images/projet_Library5.png">
+                </div>
+                <div class="photo"  onclick="largePhoto(this)">
+                  <img src="Images/projet_Library6.png">
+                </div>
+
+                <div class="photo"  onclick="largePhoto(this)">
+                  <img src="Images/projet_Library7.png">
+                </div>
+              </div>
+            </div>
+        </div>
+        </li>
+
+        <!-- 2e project -->
+        <li><h1 class="title">Simulateur de guichet automatique</h1><hr>
+          <div class="row"> 
+            <div class="column">
+              <p>Cette application simule le fonctionnement d'un guichet automatique.</p>
+              <p>Les clients peuvent consulter leurs comptes et effectuer des transactions.</p>
+              <p>L'administrateur gère les clients, les comptes et contrôle la réserve d'argent du guichet.</p>
+              <p>
+                <ul class="list">
+                  <li>C#</li>
+                  <li>WPF</li>
+                  <li>SQL Server</li>
+                  <li>Entity Framework</li>
+                </ul>
+              </p>
+              <div class="center"><button><a target="_blank" href="https://github.com/TatianaDubos/Cash-Register-Project.git">Dépôt GitHub</a></button></div>
+            </div>
+            
+            <div class="column">
+              <div class="photo-grid">
+                <div class="photo" onclick="largePhoto(this)">
+                  <img src="Images/projet_Register1.png">
+                </div>
+                <div class="photo" onclick="largePhoto(this)">
+                  <img src="Images/projet_Register2.png" >
+                </div>
+                <div class="photo" onclick="largePhoto(this)">
+                  <img src="Images/projet_Register3.png">
+                </div>
+                <div class="photo" onclick="largePhoto(this)">
+                  <img src="Images/projet_Register4.png">
+                </div>
+                <div class="photo" onclick="largePhoto(this)">
+                  <img src="Images/projet_Register9.png">
+                </div>
+                <div class="photo" onclick="largePhoto(this)">
+                  <img src="Images/projet_Register5.png">
+                </div>
+                <div class="photo" onclick="largePhoto(this)">
+                  <img src="Images/projet_Register6.png">
+                </div>
+                <div class="photo" onclick="largePhoto(this)">
+                  <img src="Images/projet_Register7.png">
+                </div>
+                <div class="photo" onclick="largePhoto(this)">
+                  <img src="Images/projet_Register8.png">
+                </div>
+              </div>
+            </div>
+        </div>
+        </li>
+
+        <!-- 3e project -->
+
+        <li><h1 class="title">Système de gestion des paies</h1><hr>
+          <div class="row"> 
+            <div class="column">
+              <p>Ce logiciel simule un système de gestion des employés et des paies d'une entreprise quelconque.</p>
+
+              <p>Enregistre le salaire hebdomadaire de chaque employé, calculé en fonction du nombre d'heures en service et du poste de l'employé.  </p>
+
+              <p>Calcule le total des contributions au régime de retraitre du Canada et des contributions à l'assurance emploi pour chaque employé.</p>
+
+              <p>
+                <ul class="list">
+                  <li>Java</li>
+                </ul>
+              </p>
+              
+              <div class="center"><button><a target="_blank" href="https://github.com/TatianaDubos/Payroll-management.git">Dépôt GitHub</a></button></div>
+            </div>
+            
+            <div class="column">
+              <div class="photo-grid">
+                <div class="photo" onclick="largePhoto(this)">
+                  <img src="Images/projet_Payroll7.png">
+                </div>
+                <div class="photo" onclick="largePhoto(this)">
+                  <img src="Images/projet_Payroll2.png" >
+                </div>
+                <div class="photo" onclick="largePhoto(this)">
+                  <img src="Images/projet_Payroll3.png">
+                </div>
+                <div class="photo" onclick="largePhoto(this)">
+                  <img src="Images/projet_Payroll4.png">
+                </div>
+                <div class="photo" onclick="largePhoto(this)">
+                  <img src="Images/projet_Payroll5.png">
+                </div>
+                <div class="photo" onclick="largePhoto(this)">
+                  <img src="Images/projet_Payroll6.png">
+                </div>
+              </div>
+            </div>
+        </div>
+        </li>
+
+        <!-- 4e project -->
+
+        <li><h1 class="title">Jeux</h1><hr>
+          <div class="row"> 
+            <div class="column">
+              <p>Version électronique du jeu du pendu, un jeu de devinettes.</p>
+
+              <p>L'algorithme manippule des chaines de caractères aléatoires, les éléments de l'interface graphique et le bon déroulement des parties.</p>
+ 
+              <p>
+                <ul class="list">
+                  <li>Html</li>
+                  <li>Css</li>
+                  <li>JavaScript</li>
+                </ul>
+              </p>
+              <div class="center"><button><a  target="_blank" href="https://github.com/TatianaDubos/Hangman-Game-app.git">Dépôt GitHub </a></button></div> 
+            </div>
+            
+            <div class="column">
+              <div class="photo-grid">
+                <div class="photo" onclick="largePhoto(this)">
+                  <img src="Images/projet_Game1.png">
+                </div>
+                <div class="photo" onclick="largePhoto(this)">
+                  <img src="Images/projet_Game2.png" >
+                </div>
+                <div class="photo" onclick="largePhoto(this)">
+                  <img src="Images/projet_Game3.png">
+                </div>
+              </div>
+            </div>
+          </div>
+
+        <div class="row"> 
+          <div class="column">
+          <p>
+            <ul class="list">
+              <li>Java</li>
+              <li>JavaFX</li>
+            </ul>
+          </p>
+
+        
+          <div class="center"><button><a target="_blank" href="https://github.com/TatianaDubos/Hangman-Game.git">Dépôt GitHub </a></button></div> 
+          </div>
+
+
+          <div class="column">
+            <div class="photo-grid">
+              <div class="photo" onclick="largePhoto(this)">
+                <img src="Images/projet_Game01.png">
+              </div>
+              <div class="photo" onclick="largePhoto(this)">
+                <img src="Images/projet_Game03.png">
+              </div>
+              <div class="photo" onclick="largePhoto(this)">
+                <img src="Images/projet_Game04.png">
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+
+        <!-- 5e project -->
+
+        <li><h1 class="title">Gestion de location de voitures</h1><hr>
+          <div class="row"> 
+            <div class="column">
+            <p>Ce logiciel permet de faciliter la gestion de location de voitures pour les employés d'une entreprise.
+              Ainsi, on peut enregistrer les contrats de location et obtenir l'information des comptes clients.</p>            
+         
+              <p>La base de données est utilisée pour conserver l'information concernant les employés, les locations, les véhicules, les clients et la facturation. </p>
+
+              <p>
+                <ul class="list">
+                  <li>C#</li>
+                  <li>WPF</li>
+                  <li>SQL Server</li>
+                  <li>Entity Framework</li>
+                </ul>
+              </p>
+              
+              <div class="center"><button><a target="_blank" href="https://github.com/TatianaDubos/Car-Rentall-Project.git">Dépôt GitHub</a></button></div>
+            </div>
+            
+            <div class="column">
+              <div class="photo-grid">
+                <div class="photo" onclick="largePhoto(this)">
+                  <img src="Images/projet_CarRent1.png">
+                </div>
+                <div class="photo" onclick="largePhoto(this)">
+                  <img src="Images/projet_CarRent2.png" >
+                </div>
+                <div class="photo" onclick="largePhoto(this)">
+                  <img src="Images/projet_CarRent3.png">
+                </div>
+                <div class="photo" onclick="largePhoto(this)">
+                  <img src="Images/projet_CarRent4.png">
+                </div>
+                <div class="photo" onclick="largePhoto(this)">
+                  <img src="Images/projet_CarRent5.png">
+                </div>
+                <div class="photo" onclick="largePhoto(this)">
+                  <img src="Images/projet_CarRent6.png">
+                </div>
+                <div class="photo" onclick="largePhoto(this)">
+                  <img src="Images/projet_CarRent7.png">
+                </div>
+                <div class="photo" onclick="largePhoto(this)">
+                  <img src="Images/projet_CarRent8.png">
+                </div>
+                <div class="photo" onclick="largePhoto(this)">
+                  <img src="Images/projet_CarRent9.png">
+                </div>
+              </div>
+            </div>
+        </div>
+        </li>
+
+    </ul>
+
+    <div id="scroll"><span>Faire défiler</span><img src="Images/scroll.png"></div>
+
+   <!-- Background -->
+    <div id="bg-wrap" >
+        <svg viewBox="0 0 100 100" preserveAspectRatio="xMidYMid slice">
+        <defs>  <!-- Gradients definitions -->
+        <radialGradient id="Gradient1" cx="50%" cy="50%" fx="0.441602%" fy="50%" r=".5"><animate attributeName="fx" dur="34s" values="0%;3%;0%" repeatCount="indefinite"></animate><stop offset="0%" stop-color="rgba(255, 0, 255, 1)"></stop><stop offset="100%" stop-color="rgba(255, 0, 255, 0)"></stop></radialGradient>
+        <radialGradient id="Gradient2" cx="50%" cy="50%" fx="2.68147%" fy="50%" r=".5"><animate attributeName="fx" dur="23.5s" values="0%;3%;0%" repeatCount="indefinite"></animate><stop offset="0%" stop-color="rgba(255, 255, 0, 1)"></stop><stop offset="100%" stop-color="rgba(255, 255, 0, 0)"></stop></radialGradient>
+        <radialGradient id="Gradient3" cx="50%" cy="50%" fx="0.836536%" fy="50%" r=".5"><animate attributeName="fx" dur="21.5s" values="0%;3%;0%" repeatCount="indefinite"></animate><stop offset="0%" stop-color="rgba(0, 255, 255, 1)"></stop><stop offset="100%" stop-color="rgba(0, 255, 255, 0)"></stop></radialGradient>
+        <radialGradient id="Gradient4" cx="50%" cy="50%" fx="4.56417%" fy="50%" r=".5"><animate attributeName="fx" dur="23s" values="0%;5%;0%" repeatCount="indefinite"></animate><stop offset="0%" stop-color="rgba(0, 255, 0, 1)"></stop><stop offset="100%" stop-color="rgba(0, 255, 0, 0)"></stop></radialGradient>
+        <radialGradient id="Gradient5" cx="50%" cy="50%" fx="2.65405%" fy="50%" r=".5"><animate attributeName="fx" dur="24.5s" values="0%;5%;0%" repeatCount="indefinite"></animate><stop offset="0%" stop-color="rgba(0,0,255, 1)"></stop><stop offset="100%" stop-color="rgba(0,0,255, 0)"></stop></radialGradient>
+        <radialGradient id="Gradient6" cx="50%" cy="50%" fx="0.981338%" fy="50%" r=".5"><animate attributeName="fx" dur="25.5s" values="0%;5%;0%" repeatCount="indefinite"></animate><stop offset="0%" stop-color="rgba(255,0,0, 1)"></stop><stop offset="100%" stop-color="rgba(255,0,0, 0)"></stop></radialGradient>
+        </defs>
+          <!-- Animations for the rectangles -->
+          <rect x="13.744%" y="1.18473%" width="100%" height="100%" fill="url(#Gradient1)" transform="rotate(334.41 50 50)"><animate attributeName="x" dur="20s" values="25%;0%;25%" repeatCount="indefinite"></animate><animate attributeName="y" dur="21s" values="0%;25%;0%" repeatCount="indefinite"></animate><animateTransform attributeName="transform" type="rotate" from="0 50 50" to="360 50 50" dur="7s" repeatCount="indefinite"></animateTransform>
+          </rect>
+          <rect x="-2.17916%" y="35.4267%" width="100%" height="100%" fill="url(#Gradient2)" transform="rotate(255.072 50 50)"><animate attributeName="x" dur="23s" values="-25%;0%;-25%" repeatCount="indefinite"></animate><animate attributeName="y" dur="24s" values="0%;50%;0%" repeatCount="indefinite"></animate><animateTransform attributeName="transform" type="rotate" from="0 50 50" to="360 50 50" dur="12s" repeatCount="indefinite"></animateTransform>
+          </rect>
+          <rect x="9.00483%" y="14.5733%" width="100%" height="100%" fill="url(#Gradient3)" from="360 50 50" to="0 50 50" dur="9s"><animate attributeName="x" dur="25s" values="0%;25%;0%" repeatCount="indefinite"></animate><animate attributeName="y" dur="12s" values="0%;25%;0%" repeatCount="indefinite"></animate><animateTransform attributeName="transform" type="rotate" from="360 50 50" to="0 50 50" dur="9s" repeatCount="indefinite"></animateTransform>
+          </rect>
+        </svg>
+      </div>
+    
+</body>
+</html>
