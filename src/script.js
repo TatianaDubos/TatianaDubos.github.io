@@ -104,5 +104,30 @@ function largePhoto(img) {
 
 }
 
+// Onsubmit event on the message form
+
+function submitForm(event) {
+  event.preventDefault(); 
+
+  const form = document.getElementById('myForm');
+  const formData = new FormData(form);
+
+// Convert the form data to URL parameters
+const params = new URLSearchParams(formData).toString();
+
+  fetch(`https://qgose3mvv4.execute-api.us-east-1.amazonaws.com/default/portfolioForm?${params}`)
+  .then(response => response.json())
+  .then(data => {
+      const responseContainer = document.getElementById('responseContainer');
+      responseContainer.textContent = data.body.toString(); 
+      
+  })
+  .catch(error => {
+      console.error('Error:', error);
+      const responseContainer = document.getElementById('responseContainer');
+      responseContainer.textContent= "erreur";
+  });
+}
+
 
 

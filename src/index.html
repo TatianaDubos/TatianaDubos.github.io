@@ -68,6 +68,20 @@
             </div>
             <p>Je vous remercie sincèrement de prendre le temps d'examiner mon portfolio et je suis disponible pour discuter de tout projet ou opportunité de stage que vous pourriez envisager.</p>
             <p> N'hésitez pas à me contacter pour toute information supplémentaire ou pour planifier une rencontre.</p>
+            
+            
+            <form id="myForm" onsubmit="submitForm(event)"  >
+                 <h2>Laissez moi un message</h2>
+
+                <label for="mail">Votre email :</label>
+                <input type="email" id="mail" name="mail" required>
+        
+                <label for="text">Message :</label>
+                <textarea id="text" name="text" required ></textarea>
+        
+                <div class="center"><button type="submit">Envoyer</button></div>
+                <p id="responseContainer" ></p>
+            </form>
         </div>
     </div>
     <br><br>
