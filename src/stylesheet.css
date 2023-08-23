@@ -195,6 +195,37 @@ p {
   animation-duration: 1s;
 }
 
+/* Message form */
+
+#myForm {
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 8px;
+  background-color: #f9f9f937;
+}
+
+#myForm h2 {
+  text-align: center;
+  padding: 10px;
+}
+
+
+#myForm input[type="email"],
+#myForm textarea {
+  width: 90%;
+  padding: 5px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+#responseContainer {
+  font-weight: bold;
+  color: white;
+  text-align: center;
+}
+
 /* Profil page */
 
 td a {
@@ -389,3 +420,7 @@ footer {
     width: 80%;
   }
 }
+
+
+
+
