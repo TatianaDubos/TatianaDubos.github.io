@@ -1,15 +1,32 @@
+// Onload event to translate the page automatically
 
+function translate() {
+  const storedLanguage = localStorage.getItem('translation');
+
+  if (storedLanguage) {
+    const translateButton = document.getElementById('translate');
+    translateButton.click(); 
+
+  } 
+}
+
+// Onclick event to translate the page
 
 function translateToEnglish() {
+
+  localStorage.setItem('translation', 'true');
+
     const targetLanguage = 'en,es'; // Target language code 
     const contentToTranslate = document.getElementById('contentToTranslate');
   
     // Create a new translation element with the appropriate parameters
     const translationElement = document.createElement('span');
     translationElement.id = 'translationElement';
+
   
     // Append the translation element to the content container
     contentToTranslate.appendChild(translationElement);
+  
   
     // Call the googleTranslateElementInit function to display the translation
     googleTranslateElementInit();
@@ -24,13 +41,10 @@ function translateToEnglish() {
         autoDisplay: false,
         multilanguagePage: true
       }, 'translationElement');
-
-      
     }
-
 }
 
-
+// Onclick event To download CV
 function downloadPDF() {
   // URL of the PDF file
   const pdfURL = 'Images/TatianaDubos_CV-2023.pdf';
