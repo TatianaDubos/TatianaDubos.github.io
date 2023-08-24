@@ -1,4 +1,4 @@
-// Onload event to translate the page automatically
+// Onload event to show the translation element if the user was using it on another page
 
 function translate() {
   const storedLanguage = localStorage.getItem('translation');
