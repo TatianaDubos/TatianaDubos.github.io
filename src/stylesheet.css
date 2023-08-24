@@ -202,6 +202,10 @@ p {
   padding-right: 20px;
   border-radius: 8px;
   background-color: #f9f9f937;
+  display: flex;
+  flex-direction: column; /* Stack child elements vertically */
+  align-items: center; /* Center items horizontally */
+  justify-content: center; 
 }
 
 #myForm h2 {
@@ -210,14 +214,16 @@ p {
 }
 
 
-#myForm input[type="email"],
+#myForm input,
 #myForm textarea {
   width: 90%;
+  max-width: 400px;
   padding: 5px;
   margin-top: 5px;
   margin-bottom: 5px;
   border: 1px solid #ccc;
   border-radius: 4px;
+  display: block;
 }
 
 #responseContainer {
