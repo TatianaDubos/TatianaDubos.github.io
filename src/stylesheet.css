@@ -271,12 +271,10 @@ footer {
   color: white;
   padding: 10px;
   text-align: center;
-  position: fixed;
+  position: sticky;
   bottom: 0;
-  width: 100%;
-}
-
-  
+  transform: translateY(100%);
+} 
 /* Responsive layout */
 
   @media (max-width: 800px) {
