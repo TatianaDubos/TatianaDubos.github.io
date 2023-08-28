@@ -1,11 +1,26 @@
 // Onload event to translate the page automatically
 
 function translate() {
+
   const storedLanguage = localStorage.getItem('translation');
 
-  if (storedLanguage) {
-    const translateButton = document.getElementById('translate');
-    translateButton.click(); 
+ 
+  if (storedLanguage !== null) {
+
+    // Verify the expiration date of the localStorage item
+    var expiration = JSON.parse(storedLanguage);
+    var now = new Date().getTime();
+
+    if (now > expiration.expiration) {
+
+      localStorage.removeItem('translation');
+    
+    } else {
+    
+      // Call translateToEnglish() function
+      const translateButton = document.getElementById('translate');
+      translateButton.click(); 
+    }
 
   } 
 }
@@ -14,7 +29,17 @@ function translate() {
 
 function translateToEnglish() {
 
-  localStorage.setItem('translation', 'true');
+  // Save the information of the translation on local storage
+  var now = new Date().getTime(); 
+  var expiration = now + (24 * 60 * 60 * 1000); // valid 24 hours
+
+  var putTranslation = {
+    valeur: "true",
+    expiration: expiration
+  };
+
+  localStorage.setItem('translation', JSON.stringify(putTranslation));
+
 
     const targetLanguage = 'en,es'; // Target language code 
     const contentToTranslate = document.getElementById('contentToTranslate');
