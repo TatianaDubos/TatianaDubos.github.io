@@ -8,12 +8,12 @@ function translate() {
   if (storedLanguage !== null) {
 
     // Verify the expiration date of the localStorage item
-    var expiration = JSON.parse(storedLanguage);
+    var getStorage = JSON.parse(storedLanguage);
     var now = new Date().getTime();
 
-    if (now > expiration.expiration) {
+    if (now > getStorage.expiration) {
 
-      localStorage.removeItem('translation');
+      localStorage.removeItem('translation'); 
     
     } else {
     
@@ -31,7 +31,7 @@ function translateToEnglish() {
 
   // Save the information of the translation on local storage
   var now = new Date().getTime(); 
-  var expiration = now + (24 * 60 * 60 * 1000); // valid 24 hours
+  var expiration = now + (12 * 60 * 60 * 1000); // valid 12 hours
 
   var putTranslation = {
     valeur: "true",
@@ -164,7 +164,7 @@ const params = new URLSearchParams(formData).toString();
   .catch(error => {
       console.error('Error:', error);
       const responseContainer = document.getElementById('responseContainer');
-      responseContainer.textContent= "erreur";
+      responseContainer.textContent= "Erreur :  Un problème est survenu.";
   });
 }
 
