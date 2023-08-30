@@ -170,14 +170,19 @@ p {
 
 
 /* Display the text on colums and rows */
-  
+.row {
+  display: table;
+  border-spacing: 2px 4px;
+  animation-name: slideDown;
+  animation-duration: 1s;
+}
+
 .column {
   display: table-cell;
   padding: 10px;
-  background-color:#800080ca;
-  
+  background-color:#800080ca; 
 }
-  
+
 
 .column.side {
   width: 30%;
@@ -188,13 +193,6 @@ p {
   width: 40%;
 }
 
-.row {
-  display: table;
-  border-spacing: 2px 4px;
-  animation-name: slideDown;
-  animation-duration: 1s;
-}
-
 
 .column img {
   width: 100%;
@@ -203,33 +201,36 @@ p {
 /* Message form */
 
 #myForm {
-  margin-top: 20px;
+  padding-top: 20px ;
+  padding-bottom: 20px ;
   padding-left: 20px;
   padding-right: 20px;
+  margin-top: 20px;
   border-radius: 8px;
   background-color: #f9f9f937;
   display: flex;
   flex-direction: column; 
   align-items: center; 
   justify-content: center; 
+
 }
 
 #myForm h2 {
-  text-align: center;
   padding: 10px;
 }
 
-
 #myForm input,
 #myForm textarea {
+  min-width: 90%;
   width: 90%;
   max-width: 400px;
+  max-height: 400px ;
   padding: 5px;
   margin-top: 5px;
   margin-bottom: 5px;
   border: 1px solid #ccc;
   border-radius: 4px;
-  display: block;
+  
 }
 
 #responseContainer {

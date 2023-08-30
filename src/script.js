@@ -1,40 +1,47 @@
-// Onload event to show the translation element if the user was using it on another page
+
+// Onload event to translate the page automatically if the tool was used 24h before
 
 function translate() {
 
   const storedLanguage = localStorage.getItem('translation');
 
- 
+  // If there is a recorded translation
   if (storedLanguage !== null) {
 
-    // Verify the expiration date of the localStorage item
-    var getStorage = JSON.parse(storedLanguage);
-    var now = new Date().getTime();
+    // Verify the expiration date of the local storage item
+    const getStorage = JSON.parse(storedLanguage);
+    const expiration = getStorage.expiration;
+    const now = new Date().getTime();
 
-    if (now > getStorage.expiration) {
+    console.log(`LocalStorage expiration date : ${new Date(expiration)}`);
 
+    if (now > expiration) {
+
+      // Delete local storage item if the expiration date has passed
       localStorage.removeItem('translation'); 
+
+      console.log(`LocalStorage deleted.`);
     
     } else {
     
-      // Call translateToEnglish() function
+      // Trigger a click event on the button to translate the page
       const translateButton = document.getElementById('translate');
       translateButton.click(); 
     }
 
-  } 
+  }
 }
 
 // Onclick event to translate the page
 
 function translateToEnglish() {
 
-  // Save the information of the translation on local storage
+  // Save the expiration time of the translation on local storage
   var now = new Date().getTime(); 
-  var expiration = now + (12 * 60 * 60 * 1000); // valid 12 hours
+  var expiration = now + (24 * 60 * 60 * 1000); // valid 24 hours
 
   var putTranslation = {
-    valeur: "true",
+    value: "true",
     expiration: expiration
   };
 
@@ -69,8 +76,9 @@ function translateToEnglish() {
     }
 }
 
-// Onclick event To download CV
+// Onclick event to download CV
 function downloadPDF() {
+
   // URL of the PDF file
   const pdfURL = 'Images/TatianaDubos_CV-2023.pdf';
 
@@ -78,9 +86,9 @@ function downloadPDF() {
   const link = document.createElement('a');
   link.href = pdfURL;
   link.target = '_blank'; // Open the PDF file in a new tab
-  link.download = 'TatianaDubos_CV-2023.pdf'; // Set the download attribute with the desired file name
+  link.download = 'TatianaDubos_CV-2023.pdf'; // Desired file name
 
-  // Programmatically trigger a click event on the anchor element
+  // Trigger a click event on the anchor element
   link.click();
 }
 
@@ -146,14 +154,17 @@ function largePhoto(img) {
 // Onsubmit event on the message form
 
 function submitForm(event) {
+
   event.preventDefault(); 
 
   const form = document.getElementById('myForm');
   const formData = new FormData(form);
 
 // Convert the form data to URL parameters
-const params = new URLSearchParams(formData).toString();
+  const params = new URLSearchParams(formData).toString();
 
+
+  // Use the AWS API REST to send the email
   fetch(`https://qgose3mvv4.execute-api.us-east-1.amazonaws.com/default/portfolioForm?${params}`)
   .then(response => response.json())
   .then(data => {
