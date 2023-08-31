@@ -1,5 +1,5 @@
 
-// Onload event to translate the page automatically if the tool was used 24h before
+// Onload event to translate the page automatically if the tool was used 1h before
 
 function translate() {
 
@@ -38,7 +38,7 @@ function translateToEnglish() {
 
   // Save the expiration time of the translation on local storage
   var now = new Date().getTime(); 
-  var expiration = now + (24 * 60 * 60 * 1000); // valid 24 hours
+  var expiration = now + (1 * 60 * 60 * 1000); // valid 1 hour
 
   var putTranslation = {
     value: "true",
