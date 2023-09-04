@@ -157,8 +157,19 @@ function submitForm(event) {
 
   event.preventDefault(); 
 
+
+  // get the fields of the form
   const form = document.getElementById('myForm');
   const formData = new FormData(form);
+
+  const mailInput = formData.get('mail'); 
+  const textInput = formData.get('text');   
+
+// Check if email or text is empty
+if (!mailInput || !textInput ) {
+  // exit the function
+  return; 
+}
 
 // Convert the form data to URL parameters
   const params = new URLSearchParams(formData).toString();
