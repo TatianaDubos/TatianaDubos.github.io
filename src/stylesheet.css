@@ -2,6 +2,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Aboreto&display=swap');
 
 
+
+/* body */
+
 *{
   margin: 0;
   padding: 0;
@@ -13,6 +16,8 @@ body {
   box-sizing: border-box;
   background-color: black;
 }
+
+
 
 /* scrollbar*/
 
@@ -46,6 +51,70 @@ body {
   background-color: purple;
 }
 
+
+
+/* content animation */
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+  
+
+/* Responsive layout */
+
+  @media (max-width: 800px) {
+    .column {
+      display: table-row;
+      width: 100%;
+    } 
+
+    .row {
+      border-spacing: 0px 4px;
+    }
+
+
+    .logo{
+      font-size: 25px;
+    }
+
+    nav ul {
+      display: flex;
+      flex-direction: column;
+    }
+
+    nav button, nav li {
+      font-size: 15px;
+    }
+
+
+  }
+
+  @media (max-width: 400px) {
+ 
+    .logo{
+      font-size: 20px;
+    }
+
+    .logo img {
+      height: 70px;
+    }
+
+    nav button, nav li {
+      font-size: small;
+    }
+  
+  }
+
+
+
 /* Background animation */
 svg{
   z-index: -1;
@@ -55,6 +124,21 @@ svg{
   height: 100%;
   width: 100%;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
   /* Style the header */
@@ -129,6 +213,33 @@ svg{
 }
 
 
+ /* Style the footer */
+ footer {
+  background-color: #33333399;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  position: sticky;
+  bottom: 0;
+  transform: translateY(100%);
+} 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* Style the content*/
 
@@ -198,13 +309,11 @@ p {
   width: 100%;
 }
 
+
 /* Message form */
 
 #myForm {
-  padding-top: 20px ;
-  padding-bottom: 20px ;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding: 20px ;
   margin-top: 20px;
   border-radius: 8px;
   background-color: #f9f9f937;
@@ -212,7 +321,6 @@ p {
   flex-direction: column; 
   align-items: center; 
   justify-content: center; 
-
 }
 
 #myForm h2 {
@@ -221,16 +329,15 @@ p {
 
 #myForm input,
 #myForm textarea {
-  min-width: 90%;
   width: 90%;
-  max-width: 400px;
-  max-height: 400px ;
+  max-height: 50vh;
+  font-weight: bolder;
+  resize: vertical;
   padding: 5px;
   margin-top: 5px;
   margin-bottom: 5px;
   border: 1px solid #ccc;
   border-radius: 4px;
-  
 }
 
 #responseContainer {
@@ -239,16 +346,22 @@ p {
   text-align: center;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* Profil page */
-
-td a {
-  color: black;
-}
-
-th  {
-  border-bottom: 3px solid white;
-  border-top: 3px solid white;
-}
 
 
 .cv {
@@ -260,78 +373,35 @@ th  {
   animation-duration: 1s;
 }
 
+.cv td a {
+  color: black;
+}
+
+.cv th  {
+  border-bottom: 3px solid white;
+  border-top: 3px solid white;
+}
+
+
 .empty{
   height: 10px;
 }
 
-/* content animation */
-
-@keyframes slideDown {
-  from {
-    opacity: 0;
-    transform: translateY(-100%);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-  
- /* Style the footer */
-footer {
-  background-color: #33333399;
-  color: white;
-  padding: 10px;
-  text-align: center;
-  position: sticky;
-  bottom: 0;
-  transform: translateY(100%);
-} 
-/* Responsive layout */
-
-  @media (max-width: 800px) {
-    .column {
-      display: table-row;
-      width: 100%;
-    } 
-
-    .row {
-      border-spacing: 0px 4px;
-    }
 
 
-    .logo{
-      font-size: 25px;
-    }
-
-    nav ul {
-      display: flex;
-      flex-direction: column;
-    }
-
-    nav button, nav li {
-      font-size: 15px;
-    }
 
 
-  }
 
-  @media (max-width: 400px) {
- 
-    .logo{
-      font-size: 20px;
-    }
 
-    .logo img {
-      height: 70px;
-    }
 
-    nav button, nav li {
-      font-size: small;
-    }
-  
-  }
+
+
+
+
+
+
+
+
 
 
 /* Projects page */
@@ -352,6 +422,8 @@ footer {
   animation-duration: 1s;
   margin-bottom: 20px;
 }
+
+/* horizontal scrollbar*/
 
 .gallery::-webkit-scrollbar {
   height: 10px;
@@ -394,7 +466,6 @@ footer {
   padding-bottom: 2px;
   font-weight: bold;
 }
-
 
 /* Grid pictures */
 
