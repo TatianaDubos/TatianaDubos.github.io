@@ -15,8 +15,8 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   box-sizing: border-box;
   background-color: black;
+  top: 0px !important;
 }
-
 
 
 /* scrollbar*/
@@ -101,7 +101,8 @@ svg{
     justify-content: space-between;
     align-items: center;
     padding: 10px;
-    height: 100px;
+    padding-top: 25px ;
+    height: 100%;
   }
 
   .logo {
@@ -136,14 +137,6 @@ svg{
     border : none;
   }
 
-  /* google traduction tool */
-
-  #translationElement{
-    position: fixed;
-    top : 0px;
-    right: 0px;
-  }
-
  /* header title animation */
 
 .neon {
@@ -164,6 +157,22 @@ svg{
   }
 }
 
+
+  /* google traduction tool */
+
+  #translationElement{
+    position: fixed;
+    top : 0px;
+    right: 0px;
+  }
+
+.skiptranslate iframe {
+  display: none;
+}
+
+#goog-gt-tt {
+  display: none !important;
+}
 
  /* Style the footer */
  footer {
@@ -273,6 +282,7 @@ p {
   flex-direction: column; 
   align-items: center; 
   justify-content: center; 
+  text-align: center;
 }
 
 #myForm h2 {
@@ -293,9 +303,7 @@ p {
 }
 
 #responseContainer {
-  font-weight: bold;
   color: white;
-  text-align: center;
 }
 
 
@@ -518,3 +526,16 @@ p {
 
 }
 
+@media (max-width: 300px) {
+
+  .logo img {
+    height: 60px;
+  }
+  nav button, nav li {
+    font-size: x-small;
+  }
+
+  .logo{
+    font-size: 18px;
+  }
+}
