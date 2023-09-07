@@ -48,7 +48,7 @@ function translateToEnglish() {
   localStorage.setItem('translation', JSON.stringify(putTranslation));
 
 
-    const targetLanguage = 'en,es'; // Target language code 
+    const targetLanguage = 'en,es,fr'; // Target language code 
     const contentToTranslate = document.getElementById('contentToTranslate');
   
     // Create a new translation element with the appropriate parameters
