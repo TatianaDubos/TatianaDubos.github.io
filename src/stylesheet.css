@@ -192,9 +192,19 @@ svg{
 
 
 
+#banner {
+  text-align: center;
+}
 
 
+#banner button {
+  padding:30px;
+  transition: 1s ease-in-out;
+}
 
+#banner button:hover {
+ background-color: #5e08babc;
+}
 
 
 

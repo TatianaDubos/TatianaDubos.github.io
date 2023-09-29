@@ -1,4 +1,5 @@
 
+
 // Onload event to translate the page automatically if the tool was used 1h before
 
 function translate() {
